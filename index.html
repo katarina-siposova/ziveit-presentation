@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>WatchOver – Student Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/white.css">
+    <style>
+      body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+      .ibm-logo {
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        width: 80px;
+      }
+      h2, h3 {
+        color: #003366;
+      }
+      .small {
+        font-size: 0.6em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <!-- Title Slide -->
+        <section>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" class="ibm-logo" alt="IBM Logo">
+          <h2>WatchOver</h2>
+          <h4>Personal Safety Application</h4>
+
+          <p><strong>Team (Students):</strong><br>
+          <span class="small">Vladislav Močilenko – vladislav.mocilenko@student.tuke.sk</span><br>
+          <span class="small">Ivan Demchenko – ivan.demchenko@student.tuke.sk</span><br>
+          <span class="small">Richard Gavrecký – richard.gavrecky@student.tuke.sk</span><br>
+          <span class="small">Tamara Nelly Škovranová – tamara.nelly.skovranova@student.tuke.sk</span><br>
+          <span class="small">Marek Hamráček – marek.hamracek@student.tuke.sk</span></p>
+          <p><strong>Mentors:</strong><br>
+          <span class="small">Róbert Barsa – robert.barsa@sk.ibm.com</span><br>
+          <span class="small">Katarína Šipošová – Katarina.Siposova1@ibm.com</span><br>
+          <span class="small">Viktor Ruska – viktor.ruska@sk.ibm.com</span><br>
+          <span class="small">Sergej Chodarev (TUKE) – sergej.chodarev@tuke.sk</span></p>
+        </section>
+
+        <!-- Problem Statement -->
+        <section>
+          <h3>Problem Statement</h3>
+          <p>Many people—especially when walking alone—feel unsafe or risk being unable to quickly call for help in emergencies.</p>
+          <p><strong>Goal:</strong> Build an application that increases personal safety through smart alerts, route tracking, and wearable device integration.</p>
+        </section>
+
+        <!-- Meme Slide -->
+        <section>
+          <h3>Quick question...</h3>
+          <img src="https://i.imgflip.com/4/4t0m5.jpg" alt="The Rock eyebrow meme" style="width:400px; border-radius:10px;">
+          <p><em>“So… do you have a wearable device?”</em></p>
+        </section>
+
+        <!-- Iteration 1 -->
+        <section>
+          <h3>Iteration 1 – Safety Check Prototype</h3>
+          <ul>
+            <li>User opens app and clicks <strong>“Start Journey”</strong>.</li>
+            <li>App prompts user at set intervals to confirm safety.</li>
+            <li>If no confirmation for 2 intervals → local alarm sounds.</li>
+            <li>When home, user clicks <strong>“I’m home”</strong> and confirms with password.</li>
+          </ul>
+        </section>
+
+        <!-- Iteration 2 -->
+        <section>
+          <h3>Iteration 2 – Smart Route & Notifications</h3>
+          <ul>
+            <li>User selects journey on map.</li>
+            <li>App tracks deviations or long stops.</li>
+            <li>User adds emergency contacts.</li>
+            <li>Contacts receive SMS with live location link and event updates.</li>
+          </ul>
+          <p><em>App becomes location-aware and connected to others.</em></p>
+        </section>
+
+        <!-- Iteration 3 -->
+        <section>
+          <h3>Iteration 3 – Wearable & Sensor Integration</h3>
+          <ul>
+            <li>Connects with wearables (Garmin, Apple Watch, Wear OS... IF YOU DO HAVE IT).</li>
+            <li>Detects falls, sudden motion, or stress signals (e.g., high heart rate).</li>
+            <li>Automatically triggers SOS alerts on detection.</li>
+          </ul>
+          <p><em>Safety checks move beyond manual input — the app “feels” danger.</em></p>
+        </section>
+
+        <!-- Iteration 4 -->
+        <section>
+          <h3>Iteration 4 – Advanced Safety Features</h3>
+          <ul>
+            <li>Choose which events trigger SOS messages.</li>
+            <li>Automatic call to <strong>112</strong> when SOS triggered.</li>
+            <li>Start voice recording upon fall or struggle detection.</li>
+          </ul>
+          <p><em>Fully-featured safety system.</em></p>
+        </section>
+
+        <!-- Iteration 5 -->
+        <section>
+          <h3>Iteration 5 – Polish & Testing</h3>
+          <ul>
+            <li>Test with real journeys and wearable data.</li>
+            <li>Adjust sensitivity to reduce false alarms.</li>
+            <li>Polish UI and performance.</li>
+            <li>Prepare final demo, video and poster.</li>
+          </ul>
+        </section>
+
+                <!-- Creativity Slide -->
+        <section>
+          <h3>Feel Free to Innovate</h3>
+          <ul>
+            <li>We want you to explore and innovate — the app’s features are just a starting point.</li>
+            <li>If you have ideas for improvements, new functionalities, or better solutions, please share them.</li>
+            <li>Your creativity is welcome — we trust you can make the app even better.</li>
+          </ul>
+        </section>
+
+        <!-- Technologies Slide -->
+      <section>
+        <h3>Technologies & Tools</h3>
+        <ul>
+          <li><strong>Mobile App:</strong> React Native or Flutter</li>
+          <li><strong>Wearable Integration (if present):</strong> Garmin Connect API, Apple HealthKit, Google Fit/Wear OS</li>
+          <li><strong>Notifications:</strong> Push notifications, SMS API (Twilio or similar)</li>
+          <li><strong>Version Control:</strong> GitLab (KPI GitLab)</li>
+          <li><strong>Board: <a href="https://app.mural.co/t/watchover3813/m/watchover3813/1760372572362/020f9b777758b54578dca0aad3fde6041f68c706?sender=ua58278322f06561551309452" target="_blank">Mural</a></strong></li>
+        </ul>
+        <p><em>Creativity in choosing solutions is encouraged.</em></p>
+      </section>
+
+
+                <!-- Team Rhythm / Sprint Slide -->
+        <section>
+          <h3>Team Rhythm</h3>
+          <ul>
+            <li><strong>Sprints:</strong> 1 week each</li>
+            <li><strong>Meetings:</strong> Regular meetings at the end of each sprint</li>
+            <li><strong>Agenda:</strong> <li>Each meeting includes a demo of what was done</li>
+            <li>Discuss who implemented which features, decide what to do next</li>
+            </li>
+          </ul>
+          <p><em>Set a day when to meet</em></p>
+        </section>
+
+        <section>
+          <h3>Full Sprint Plan</h3>
+        <p><a href="sprint_plan.html" target="_blank">View plan</a></p>
+        </section>
+        <!-- QR Code Slide -->
+        <section>
+          <h3>Scan to access these slides</h3>
+          <!-- <p><a href="https://pages.github.ibm.com/Katarina-Siposova1/watchover-presentation/" target="_blank">
+            https://pages.github.ibm.com/Katarina-Siposova1/watchover-presentation/
+          </a></p> -->
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://pages.github.ibm.com/Katarina-Siposova1/watchover-presentation/" 
+              alt="QR Code to WatchOver Presentation" style="margin-top:20px;">
+        </section>
+
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        hash: true,
+        transition: 'fade',
+        slideNumber: true
+      });
+    </script>
+  </body>
+</html>
