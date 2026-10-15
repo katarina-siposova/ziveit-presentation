@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Hedgehog Feeder Plan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin: 30px;
+      background-color: #f9f9f9;
+      color: #003366;
+    }
+    h2 {
+      text-align: center;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #003366;
+      padding: 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #003366;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #e6f0ff;
+    }
+    tr.phase td {
+      background-color: #003366;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Smart Hedgehog Feeder &amp; Wildlife Monitoring System – Plan</h2>
+
+  <table>
+    <tr>
+      <th>Sprint</th>
+      <th>Focus</th>
+      <th>Deliverable</th>
+    </tr>
+    <tr class="phase"><td colspan="3">Phase 1 – Wildlife Detection &amp; Dashboard (MVP 1)</td></tr>
+    <tr>
+      <td>Week 1</td>
+      <td>AI Detection Prototype<br>
+      - Find night-vision footage featuring hedgehogs, rats and cats<br>
+      - Select a pretrained computer vision model and test species recognition<br>
+      - Build a Python script to process images and videos<br>
+      - Display predicted species and confidence scores</td>
+      <td>AI prototype tested on prerecorded night-vision footage</td>
+    </tr>
+    <tr>
+      <td>Week 2</td>
+      <td>Raspberry Pi &amp; Camera Setup<br>
+      - Install the required software on the Raspberry Pi<br>
+      - Connect the camera and verify image capture<br>
+      - Run the detection script on the Raspberry Pi<br>
+      - Test using prerecorded wildlife videos displayed on a monitor in front of the camera</td>
+      <td>Working camera and AI detection on the Raspberry Pi</td>
+    </tr>
+    <tr>
+      <td>Week 3</td>
+      <td>Cloud Dashboard<br>
+      - Set up <a href="https://io.adafruit.com/" target="_blank">Adafruit IO</a> and create data feeds<br>
+      - Send detection events from the Raspberry Pi using Python and MQTT or HTTP<br>
+      - Create a dashboard showing species detections, timestamps, confidence scores and visit counts</td>
+      <td>MVP 1 – wildlife detection with a cloud dashboard</td>
+    </tr>
+    <tr>
+      <td>Week 4</td>
+      <td>Detection Testing<br>
+      - Test using available wildlife footage and, if safe and feasible, live observations<br>
+      - Evaluate detection performance and document limitations</td>
+      <td>Initial detection test results</td>
+    </tr>
+    <tr class="phase"><td colspan="3">Phase 2 – Smart Feeder (MVP 2)</td></tr>
+    <tr>
+      <td>Weeks 5–6</td>
+      <td>Feeder Construction &amp; Door Mechanism<br>
+      - Construct the feeder enclosure<br>
+      - Install a servo motor and build the motorized door<br>
+      - Connect the Raspberry Pi, camera, motion sensor and servo motor<br>
+      - Develop and test the door-control software<br>
+      - Consider light or sound deterrents as optional alternatives for discouraging unwanted animals</td>
+      <td>Feeder prototype with a working motorized door and connected hardware</td>
+    </tr>
+    <tr>
+      <td>Weeks 7–8</td>
+      <td>Hardware &amp; Software Integration<br>
+      - Connect the AI detection system to the door-control logic<br>
+      - Allow access for sufficiently confident hedgehog detections; keep the door closed for other or uncertain predictions<br>
+      - Integrate the feeder with MVP 1 and the Adafruit IO dashboard<br>
+      - Display detection events, timestamps and door status<br>
+      - Test the complete system and troubleshoot integration issues<br>
+      - Verify that local detection and door control work without an internet connection</td>
+      <td>Fully integrated smart feeder with AI detection, automated door control and cloud monitoring</td>
+    </tr>
+    <tr>
+      <td>Week 9</td>
+      <td>Final Testing &amp; Presentation<br>
+      - Test the complete system using prerecorded footage and available live wildlife footage<br>
+      - Evaluate detection accuracy, door operation and dashboard reliability<br>
+      - Document limitations and possible improvements<br>
+      - Demonstrate the prototype and present the project results</td>
+      <td>Final MVP 2 demonstration and project report</td>
+    </tr>
+  </table>
+
+</body>
+</html>
