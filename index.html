@@ -200,7 +200,16 @@
         <section>
           <h3>Technologies &amp; Tools</h3>
           <ul>
-            <li><strong>Hardware:</strong> Raspberry Pi, camera, motion sensor, servo motor</li>
+            <li><strong>Hardware:</strong>
+              <ul>
+                <li>Raspberry Pi – at least a Zero 2 W (higher-end versions recommended for AI features)</li>
+                <li>Raspberry Pi camera – AI version (day only) or <strong>NoIR</strong> (recommended; enables night vision with IR LED)</li>
+                <li>IR LED (infrared LED) – for night vision</li>
+                <li>Standard colored LEDs – hardware feedback</li>
+                <li>Active buzzer – to deter non-hedgehog animals (flashing LEDs or similar methods can also be used)</li>
+                <li>Motion sensor, servo motor</li>
+              </ul>
+            </li>
             <li><strong>Software:</strong> Python, pretrained computer vision model</li>
             <li><strong>Cloud dashboard:</strong> <a href="https://io.adafruit.com/" target="_blank">Adafruit IO</a> (MQTT or HTTP)</li>
             <li><strong>Version Control:</strong> GitLab (KPI GitLab)</li>
