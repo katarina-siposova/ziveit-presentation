@@ -2,23 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>WatchOver – Student Project</title>
+    <title>Smart Hedgehog Feeder &amp; Wildlife Monitoring System – Student Project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/white.css">
     <style>
       body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
       .ibm-logo {
-        position: absolute;
-        top: 10px;
-        left: 20px;
-        width: 80px;
+        display: block;
+        margin: 0 auto 30px;
+        width: 120px;
       }
       h2, h3 {
         color: #003366;
       }
       .small {
         font-size: 0.6em;
+      }
+      .reveal ul {
+        font-size: 0.75em;
+      }
+      .deliverable {
+        font-size: 0.7em;
+        margin-top: 30px;
+        padding: 10px 20px;
+        border-left: 6px solid #003366;
+        background: #f2f6fa;
+        text-align: left;
       }
     </style>
   </head>
@@ -29,21 +39,20 @@
         <!-- Title Slide -->
         <section>
           <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" class="ibm-logo" alt="IBM Logo">
-          <h2>WatchOver</h2>
-          <h4>Personal Safety Application</h4>
-
-
+          <h2>Smart Hedgehog Feeder &amp; Wildlife Monitoring System</h2>
         </section>
 
+        <!-- Team -->
         <section>
           <p><strong>Team (Students):</strong><br>
-          <span class="small">Vladislav Močilenko – vladislav.mocilenko@student.tuke.sk</span><br>
-          <span class="small">Ivan Demchenko – ivan.demchenko@student.tuke.sk</span><br>
-          <span class="small">Richard Gavrecký – richard.gavrecky@student.tuke.sk</span><br>
-          <span class="small">Tamara Nelly Škovranová – tamara.nelly.skovranova@student.tuke.sk</span><br>
-          <span class="small">Marek Hamráček – marek.hamracek@student.tuke.sk</span></p>
+          <span class="small">Zakhar Fesiuk</span><br>
+          <span class="small">Denys Herych</span><br>
+          <span class="small">Bohdan Hnidets</span><br>
+          <span class="small">Tomáš Šafranko</span><br>
+          <span class="small">Jozef Tirdil</span></p>
         </section>
 
+        <!-- Mentors -->
         <section>
           <p><strong>Mentors:</strong><br>
           <span class="small">Róbert Barsa – robert.barsa@sk.ibm.com</span><br>
@@ -52,122 +61,176 @@
           <span class="small">Sergej Chodarev (TUKE) – sergej.chodarev@tuke.sk</span></p>
         </section>
 
-        <!-- Problem Statement -->
+        <!-- Project Idea -->
         <section>
-          <h3>Problem Statement</h3>
-          <p>Many people—especially when walking alone—feel unsafe or risk being unable to quickly call for help in emergencies.</p>
-          <p><strong>Goal:</strong> Build an application that increases personal safety through smart alerts, route tracking, and wearable device integration.</p>
+          <h3>Project Idea</h3>
+          <p>A wildlife monitoring system and smart feeder that recognizes which animal is visiting and gives food <strong>only to hedgehogs</strong>.</p>
+          <p><strong>Goal:</strong> Build a Raspberry Pi prototype combining a camera, an AI detection model, a cloud dashboard and a motorized door.</p>
         </section>
 
-        <!-- Meme Slide -->
+        <!-- Two phases -->
         <section>
-          <h3>Quick question...</h3>
-          <img src="https://i.imgflip.com/4/4t0m5.jpg" alt="The Rock eyebrow meme" style="width:400px; border-radius:10px;">
-          <p><em>“So… do you have a wearable device?”</em></p>
-        </section>
-
-        <!-- Iteration 1 -->
-        <section>
-          <h3>Iteration 1 – Safety Check Prototype</h3>
+          <h3>Two Phases, Two MVPs</h3>
           <ul>
-            <li>User opens app and clicks <strong>“Start Journey”</strong>.</li>
-            <li>App prompts user at set intervals to confirm safety.</li>
-            <li>If no confirmation for 2 intervals → local alarm sounds.</li>
-            <li>When home, user clicks <strong>“I’m home”</strong> and confirms with password.</li>
+            <li><strong>Phase 1 (Weeks 1–4):</strong> Wildlife Detection &amp; Dashboard – <strong>MVP 1</strong></li>
+            <li><strong>Phase 2 (Weeks 5–9):</strong> Smart Feeder – <strong>MVP 2</strong></li>
           </ul>
         </section>
 
-        <!-- Iteration 2 -->
+        <!-- Phase 1 -->
         <section>
-          <h3>Iteration 2 – Smart Route & Notifications</h3>
-          <ul>
-            <li>User selects journey on map.</li>
-            <li>App tracks deviations or long stops.</li>
-            <li>User adds emergency contacts.</li>
-            <li>Contacts receive SMS with live location link and event updates.</li>
-          </ul>
-          <p><em>App becomes location-aware and connected to others.</em></p>
+          <h2>Phase 1</h2>
+          <h4>Wildlife Detection &amp; Dashboard (MVP 1)</h4>
         </section>
 
-        <!-- Iteration 3 -->
+        <!-- Week 1 -->
         <section>
-          <h3>Iteration 3 – Wearable & Sensor Integration</h3>
+          <h3>Week 1 – AI Detection Prototype</h3>
           <ul>
-            <li>Connects with wearables (Garmin, Apple Watch, Wear OS... IF YOU DO HAVE IT).</li>
-            <li>Detects falls, sudden motion, or stress signals (e.g., high heart rate).</li>
-            <li>Automatically triggers SOS alerts on detection.</li>
+            <li>Find night-vision footage featuring hedgehogs, rats and cats.</li>
+            <li>Select a pretrained computer vision model and test species recognition.</li>
+            <li>Build a Python script to process images and videos.</li>
+            <li>Display predicted species and confidence scores.</li>
           </ul>
-          <p><em>Safety checks move beyond manual input — the app “feels” danger.</em></p>
+          <p class="deliverable"><strong>Deliverable:</strong> AI prototype tested on prerecorded night-vision footage.</p>
         </section>
 
-        <!-- Iteration 4 -->
+        <!-- Week 2 -->
         <section>
-          <h3>Iteration 4 – Advanced Safety Features</h3>
+          <h3>Week 2 – Raspberry Pi &amp; Camera Setup</h3>
           <ul>
-            <li>Choose which events trigger SOS messages.</li>
-            <li>Automatic call to <strong>112</strong> when SOS triggered.</li>
-            <li>Start voice recording upon fall or struggle detection.</li>
+            <li>Install the required software on the Raspberry Pi.</li>
+            <li>Connect the camera and verify image capture.</li>
+            <li>Run the detection script on the Raspberry Pi.</li>
+            <li>Test using prerecorded wildlife videos displayed on a monitor in front of the camera.</li>
           </ul>
-          <p><em>Fully-featured safety system.</em></p>
+          <p class="deliverable"><strong>Deliverable:</strong> Working camera and AI detection on the Raspberry Pi.</p>
         </section>
 
-        <!-- Iteration 5 -->
+        <!-- Week 3 -->
         <section>
-          <h3>Iteration 5 – Polish & Testing</h3>
+          <h3>Week 3 – Cloud Dashboard</h3>
           <ul>
-            <li>Test with real journeys and wearable data.</li>
-            <li>Adjust sensitivity to reduce false alarms.</li>
-            <li>Polish UI and performance.</li>
-            <li>Prepare final demo, video and poster.</li>
+            <li>Set up <a href="https://io.adafruit.com/" target="_blank">Adafruit IO</a> and create data feeds.</li>
+            <li>Send detection events from the Raspberry Pi using Python and MQTT or HTTP.</li>
+            <li>Create a dashboard showing species detections, timestamps, confidence scores and visit counts.</li>
+          </ul>
+          <p class="deliverable"><strong>Deliverable:</strong> MVP 1 – wildlife detection with a cloud dashboard.</p>
+        </section>
+
+        <!-- Week 4 -->
+        <section>
+          <h3>Week 4 – Detection Testing</h3>
+          <ul>
+            <li>Test using available wildlife footage and, if safe and feasible, live observations.</li>
+            <li>Evaluate detection performance and document limitations.</li>
+          </ul>
+          <p class="deliverable"><strong>Deliverable:</strong> Initial detection test results.</p>
+        </section>
+
+        <!-- Phase 2 -->
+        <section>
+          <h2>Phase 2</h2>
+          <h4>Smart Feeder (MVP 2)</h4>
+        </section>
+
+        <!-- Weeks 5-6 -->
+        <section>
+          <h3>Weeks 5–6 – Feeder Construction &amp; Door Mechanism</h3>
+          <ul>
+            <li>Construct the feeder enclosure.</li>
+            <li>Install a servo motor and build the motorized door.</li>
+            <li>Connect the Raspberry Pi, camera, motion sensor and servo motor.</li>
+            <li>Develop and test the door-control software.</li>
+            <li>Consider light or sound deterrents as optional alternatives for discouraging unwanted animals.</li>
+          </ul>
+          <p class="deliverable"><strong>Deliverable:</strong> Feeder prototype with a working motorized door and connected hardware.</p>
+        </section>
+
+        <!-- Weeks 7-8 -->
+        <section>
+          <h3>Weeks 7–8 – Hardware &amp; Software Integration</h3>
+          <ul>
+            <li>Connect the AI detection system to the door-control logic.</li>
+            <li>Allow access for sufficiently confident hedgehog detections while keeping the door closed for other or uncertain predictions.</li>
+            <li>Integrate the feeder with MVP 1 and the Adafruit IO dashboard.</li>
+            <li>Display detection events, timestamps and door status.</li>
+            <li>Test the complete system and troubleshoot integration issues.</li>
+            <li>Verify that local detection and door control work without an internet connection.</li>
+          </ul>
+          <p class="deliverable"><strong>Deliverable:</strong> Fully integrated smart feeder with AI detection, automated door control and cloud monitoring.</p>
+        </section>
+
+        <!-- Week 9 -->
+        <section>
+          <h3>Week 9 – Final Testing &amp; Presentation</h3>
+          <ul>
+            <li>Test the complete system using prerecorded footage and available live wildlife footage.</li>
+            <li>Evaluate detection accuracy, door operation and dashboard reliability.</li>
+            <li>Document limitations and possible improvements.</li>
+            <li>Demonstrate the prototype and present the project results.</li>
+          </ul>
+          <p class="deliverable"><strong>Deliverable:</strong> Final MVP 2 demonstration and project report.</p>
+        </section>
+
+        <!-- Important considerations -->
+        <section>
+          <h3>Important Considerations</h3>
+          <ul>
+            <li>Ensure the door cannot trap or injure an animal.</li>
+            <li>Evaluate optional light or sound deterrents for effectiveness and wildlife safety.</li>
           </ul>
         </section>
 
-                <!-- Creativity Slide -->
+        <!-- Creativity Slide -->
         <section>
           <h3>Feel Free to Innovate</h3>
           <ul>
-            <li>We want you to explore and innovate — the app’s features are just a starting point.</li>
-            <li>If you have ideas for improvements, new functionalities, or better solutions, please share them.</li>
-            <li>Your creativity is welcome — we trust you can make the app even better.</li>
+            <li>The plan is a starting point — explore and improve it.</li>
+            <li>Share ideas for better detection, smarter door logic or new features.</li>
           </ul>
         </section>
 
         <!-- Technologies Slide -->
-      <section>
-        <h3>Technologies & Tools</h3>
-        <ul>
-          <li><strong>Mobile App:</strong> React Native or Flutter</li>
-          <li><strong>Wearable Integration (if present):</strong> Garmin Connect API, Apple HealthKit, Google Fit/Wear OS</li>
-          <li><strong>Notifications:</strong> Push notifications, SMS API (Twilio or similar)</li>
-          <li><strong>Version Control:</strong> GitLab (KPI GitLab)</li>
-          <li><strong>Board: <a href="https://app.mural.co/t/watchover3813/m/watchover3813/1760372572362/020f9b777758b54578dca0aad3fde6041f68c706?sender=ua58278322f06561551309452" target="_blank">Mural</a></strong></li>
-        </ul>
-        <p><em>Creativity in choosing solutions is encouraged.</em></p>
-      </section>
+        <section>
+          <h3>Technologies &amp; Tools</h3>
+          <ul>
+            <li><strong>Hardware:</strong> Raspberry Pi, camera, motion sensor, servo motor</li>
+            <li><strong>Software:</strong> Python, pretrained computer vision model</li>
+            <li><strong>Cloud dashboard:</strong> <a href="https://io.adafruit.com/" target="_blank">Adafruit IO</a> (MQTT or HTTP)</li>
+            <li><strong>Version Control:</strong> GitLab (KPI GitLab)</li>
+            <li><strong>Board: <a href="https://app.mural.co/t/katkasown2119/m/katkasown2119/1792054339895/78e6fbae9cbe2253df85c82ca27b6b1171a70335?sender=ub6dcf7de931b61fb5f2c3502" target="_blank">Mural</a></strong></li>
+          </ul>
+          <p><em>Creativity in choosing solutions is encouraged.</em></p>
+        </section>
 
-
-                <!-- Team Rhythm / Sprint Slide -->
+        <!-- Team Rhythm / Sprint Slide -->
         <section>
           <h3>Team Rhythm</h3>
           <ul>
             <li><strong>Sprints:</strong> 1 week each</li>
             <li><strong>Meetings:</strong> Regular meetings at the end of each sprint</li>
-            <li><strong>Agenda:</strong> <li>Each meeting includes a demo of what was done</li>
-            <li>Discuss who implemented which features, decide what to do next</li>
+            <li><strong>Agenda:</strong>
+              <ul>
+                <li>Each meeting includes a demo of what was done</li>
+                <li>Discuss who implemented which features, decide what to do next</li>
+              </ul>
             </li>
           </ul>
           <p><em>Set a day when to meet</em></p>
         </section>
 
+        <!-- Full Plan link -->
         <section>
-          <h3>Full Sprint Plan</h3>
-        <p><a href="sprint_plan.html" target="_blank">View plan</a></p>
+          <h3>Full Plan</h3>
+          <p><a href="hedgehog_plan.html" target="_blank">View plan</a></p>
         </section>
+
         <!-- QR Code Slide -->
         <section>
           <h3>Scan to access these slides</h3>
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://katarina-siposova.github.io/watchover-presentation" 
-              alt="QR Code to WatchOver Presentation" style="margin-top:20px;">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&amp;data=https://katarina-siposova.github.io/ziveit-presentation/"
+              alt="QR Code to Smart Hedgehog Feeder Presentation" style="margin-top:20px;">
         </section>
 
       </div>
